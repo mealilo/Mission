@@ -17,14 +17,18 @@ namespace Mission.Controllers
         {
             _logger = logger;
         }
-
+        //Home Page returns index view
         public IActionResult Index()
         {
+            ViewData["Title"] = "Home";
             return View();
         }
 
-        public IActionResult Privacy()
+        //Calculator returns calcator view
+        public IActionResult Calculator()
+
         {
+            ViewData["Title"] = "Calculator";
             return View();
         }
 
