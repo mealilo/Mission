@@ -24,6 +24,13 @@ namespace Mission.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Index(Grades model)
+        {
+
+            return View();
+        }
+
         //Calculator returns calcator view
         public IActionResult Calculator()
 

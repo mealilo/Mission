@@ -3,26 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+
 namespace Mission.Models
 {
     public class Grades
     {
-
+        [Required] public double assignment { get; set; }
         [Required]
         [Range(0, 100)]
-        public string assignment { get; set; }
+        public decimal project { get; set; }
         [Required]
         [Range(0, 100)]
-        public string group { get; set; }
+        public decimal quiz { get; set; }
         [Required]
         [Range(0, 100)]
-        public string quiz { get; set; }
+        public decimal exam { get; set; }
         [Required]
         [Range(0, 100)]
-        public string exam { get; set; }
-        [Required]
-        [Range(0, 100)]
-        public string intex { get; set; }
+        public decimal intex { get; set; }
 
     }
 }

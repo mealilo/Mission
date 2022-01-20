@@ -1,5 +1,5 @@
 ﻿@{
-    
+
 }
 <h1>@ViewData["Title"]</h1>
 @model Grades
@@ -7,33 +7,40 @@
 
     <h3 class="m-3">Calculate your grade here!</h3>
     <div class="d-flex justify-content-center">
-        <form style="width: 50%">
+        <form method="post" style="width: 50%">
             <label>Assignment Grade</label>
-            <input asp-for="assignment" class="form-control" id="asgGrade" />
+            <input type="number" asp-for="assignment" class="form-control" id="asgGrade" />
             <br />
 
             <label>Group Project Grade</label>
-            <input asp-for="project" class="form-control" id="projectGrade" />
+            <input type="number" asp-for="project" class="form-control" id="projectGrade" />
             <br />
 
             <label>Quizzes Grade</label>
-            <input asp-for="quiz" class="form-control" id="quizGrade" />
+            <input type="number" asp-for="quiz" class="form-control" id="quizGrade" />
             <br />
 
             <label>Exams Grade</label>
-            <input asp-for="exam" class="form-control" id="examGrade" />
+            <input type="number" asp-for="exam" class="form-control" id="examGrade" />
             <br />
 
             <label>Intext Grade</label>
-            <input asp-for="intex" class="form-control" id="intexGrade" />
+            <input type="number" asp-for="intex" class="form-control" id="intexGrade" />
             <br />
-            <input type="button" value="Calculate Grade" class="form-control" id="calcGrade" />
+            <input type="submit" value="Calculate Grade" class="form-control" id="calcGrade" />
+
+            <div asp-validation-summary="All">
+
+            </div>
         </form>
+
+
     </div>
 
 </div>
 
 <div class=" d-flex justify-content-center flex-column bg-danger p-5 m-3 rounded-3">
+
     <div class=" d-flex justify-content-center">
         <p>Final Grade Numerical:    </p>
         <br />
