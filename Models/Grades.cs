@@ -8,10 +8,9 @@ namespace Mission.Models
 {
     public class Grades
     {
-        [Required] public double assignment { get; set; }
+        [Required] [Range(0, 100)] public double assignment { get; set; }
         [Required]
-        [Range(0, 100)]
-        public decimal project { get; set; }
+        [Range(0, 100)]public decimal project { get; set; }
         [Required]
         [Range(0, 100)]
         public decimal quiz { get; set; }
